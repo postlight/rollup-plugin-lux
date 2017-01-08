@@ -8,5 +8,7 @@ install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - ps: npm install
 test_script:
+  - npm run flow
+  - npm run lint
   - npm test
 build: off

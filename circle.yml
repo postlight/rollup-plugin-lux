@@ -1,3 +1,9 @@
+test:
+  override:
+    - npm run flow
+    - npm run lint
+    - npm test
+    - npm run test:codecov
 machine:
   node:
     version: 6
