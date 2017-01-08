@@ -15,6 +15,8 @@ export default {
       return src;
     }
 
+    // console.log(JSON.stringify(body, null, 2));
+
     let classDecl;
 
     switch (defaultExport.declaration.type) {

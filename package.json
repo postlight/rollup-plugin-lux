@@ -10,7 +10,7 @@
     "flow": "flow check",
     "install:types": "flow-typed install --overwrite",
     "lint": "remark . && eslint .",
-    "test": "NODE_ENV=test jest --coverage",
+    "test": "jest --coverage",
     "test:codecov": "curl -s https://codecov.io/bash | bash"
   },
   "author": "Zachary Golba",
