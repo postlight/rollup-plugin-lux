@@ -11,6 +11,12 @@ to continue to use this method to resolve dependencies of an application by
 appending an `Object.defineProperty` call below each constructor that sub classes
 a member of the public [Lux](https://github.com/postlight/lux) API.
 
+*Note:*
+
+> This is a module that [Lux](https://github.com/postlight/lux) uses internally.
+> It is not required for users of [Lux](https://github.com/postlight/lux) to add
+> this plugin to their `package.json` file.
+
 **Example**
 
 *Before*
