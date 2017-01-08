@@ -2,6 +2,7 @@
 import path from 'path';
 
 import fs from 'fs-promise';
+import eol from 'eol';
 
 import plugin from '../index';
 
@@ -31,6 +32,8 @@ describe('#transform()', () => {
           )
         ]).then(files => {
           [subject, result] = files;
+          subject = eol.auto(subject);
+          result = eol.auto(result);
         })
       ));
 
@@ -63,6 +66,8 @@ describe('#transform()', () => {
           )
         ]).then(files => {
           [subject, result] = files;
+          subject = eol.auto(subject);
+          result = eol.auto(result);
         })
       ));
 
@@ -85,7 +90,7 @@ describe('#transform()', () => {
           ),
           'utf8'
         ).then(file => {
-          subject = file;
+          subject = eol.auto(file);
         })
       ));
 
@@ -102,7 +107,7 @@ describe('#transform()', () => {
           path.join(__dirname, 'fixtures', 'export-default-function.js'),
           'utf8'
         ).then(file => {
-          subject = file;
+          subject = eol.auto(file);
         })
       ));
 
@@ -119,7 +124,7 @@ describe('#transform()', () => {
           path.join(__dirname, 'fixtures', 'export-default-arrow-function.js'),
           'utf8'
         ).then(file => {
-          subject = file;
+          subject = eol.auto(file);
         })
       ));
 
@@ -136,7 +141,7 @@ describe('#transform()', () => {
           path.join(__dirname, 'fixtures', 'named-export.js'),
           'utf8'
         ).then(file => {
-          subject = file;
+          subject = eol.auto(file);
         })
       ));
 

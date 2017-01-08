@@ -37,6 +37,7 @@
     "rollup-plugin-babel": "2.7.1"
   },
   "dependencies": {
-    "acorn": "4.0.4"
+    "acorn": "4.0.4",
+    "eol": "0.5.1"
   }
 }

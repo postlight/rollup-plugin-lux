@@ -1,6 +1,5 @@
 // @flow
-import { EOL } from 'os';
-
+import eol from 'eol';
 import { parse } from 'acorn';
 
 import { PARSER_OPTIONS } from './constants';
@@ -41,13 +40,13 @@ export default {
 
     if (extendsLux(classDecl) && classDecl.type === 'ClassDeclaration') {
       const { id: { name } } = classDecl;
+      let result = eol.auto(src);
 
-      return [
-        src,
-        EOL,
-        `Object.defineProperty(${name}, 'name', { value: '${name}' });`,
-        EOL
-      ].join('');
+      result = eol.after(result);
+      result += `Object.defineProperty(${name}, 'name', { value: '${name}' });`;
+      result = eol.after(result);
+
+      return result;
     }
 
     return src;
