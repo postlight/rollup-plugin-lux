@@ -1,0 +1,42 @@
+{
+  "name": "rollup-plugin-lux",
+  "version": "1.0.0",
+  "description": "Rollup plugin for bundling Lux applications",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "build": "npm run clean && rollup -c",
+    "clean": "node -e 'require(\"cash\").rm(\"coverage dist\", { recursive: true, force: true }); process.exit(0);'",
+    "flow": "flow check",
+    "install:types": "flow-typed install --overwrite",
+    "lint": "remark . && eslint .",
+    "prepublish": "npm test && npm run build",
+    "test": "NODE_ENV=test jest --coverage",
+    "test:codecov": "curl -s https://codecov.io/bash | bash"
+  },
+  "author": "Zachary Golba",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6.21.0",
+    "babel-eslint": "7.1.1",
+    "babel-jest": "18.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.18.0",
+    "babel-plugin-transform-flow-strip-types": "6.21.0",
+    "babel-preset-lux": "2.0.1",
+    "cash": "0.8.0",
+    "eslint": "3.13.0",
+    "eslint-config-airbnb-base": "11.0.0",
+    "eslint-plugin-flowtype": "2.29.2",
+    "eslint-plugin-import": "2.2.0",
+    "flow-bin": "0.37.4",
+    "flow-typed": "2.0.0",
+    "jest": "18.1.0",
+    "remark-cli": "2.1.0",
+    "remark-preset-lint-recommended": "1.0.0",
+    "rollup": "0.41.1",
+    "rollup-plugin-babel": "2.7.1"
+  },
+  "dependencies": {
+    "acorn": "4.0.4"
+  }
+}

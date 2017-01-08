@@ -1,0 +1,14 @@
+[libs]
+flow-typed/
+decl/
+
+[ignore]
+.*/lib/.*
+.*/dist/.*
+.*/scripts/.*
+
+[options]
+suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
+
+[version]
+0.37.4
