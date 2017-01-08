@@ -62,10 +62,10 @@ export default {
       // $FlowIgnore
       const { id: { name } } = classDecl;
 
-      return (
-        src
-        + `\nObject.defineProperty(${name}, 'name', { value: '${name}' });\n`
-      );
+      return [
+        src,
+        `\nObject.defineProperty(${name}, 'name', { value: '${name}' });\n`
+      ].join('');
     }
 
     return src;

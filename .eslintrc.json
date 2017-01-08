@@ -7,6 +7,15 @@
   "env": {
     "node": true
   },
+  "globals": {
+    "it": true,
+    "expect": true,
+    "describe": true,
+    "after": true,
+    "before": true,
+    "afterEach": true,
+    "beforeEach": true
+  },
   "settings": {
     "flowtype": {
       "onlyFilesWithFlowAnnotation": true
