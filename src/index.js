@@ -37,7 +37,6 @@ export default {
       return src;
     }
 
-
     let classDecl: void | ClassDeclaration;
 
     switch (defaultExport.declaration.type) {
