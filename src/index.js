@@ -1,4 +1,6 @@
 // @flow
+import { EOL } from 'os';
+
 import { parse } from 'acorn';
 
 import { PARSER_OPTIONS } from './constants';
@@ -42,7 +44,9 @@ export default {
 
       return [
         src,
-        `\nObject.defineProperty(${name}, 'name', { value: '${name}' });\n`
+        EOL,
+        `Object.defineProperty(${name}, 'name', { value: '${name}' });`,
+        EOL
       ].join('');
     }
 
