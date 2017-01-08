@@ -8,5 +8,5 @@ node_modules/
 # misc
 decl/
 flow-typed/
-src/test/fixtures/**
-src/test/results/**
+*/**/test/fixtures/**
+*/**/test/results/**

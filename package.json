@@ -29,6 +29,7 @@
     "eslint-plugin-import": "2.2.0",
     "flow-bin": "0.37.4",
     "flow-typed": "2.0.0",
+    "fs-promise": "1.0.0",
     "jest": "18.1.0",
     "remark-cli": "2.1.0",
     "remark-preset-lint-recommended": "1.0.0",

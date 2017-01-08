@@ -1,6 +1,7 @@
 // @flow
-import fs from 'fs';
 import path from 'path';
+
+import fs from 'fs-promise';
 
 import plugin from '../index';
 
@@ -9,16 +10,20 @@ describe('#transform()', () => {
     let subject;
     let result;
 
-    beforeEach(() => {
-      subject = fs.readFileSync(
-        path.join(__dirname, 'fixtures', 'export-default-statement.js'),
-        'utf8'
-      );
-      result = fs.readFileSync(
-        path.join(__dirname, 'results', 'export-default-statement.js'),
-        'utf8'
-      );
-    });
+    beforeEach(() => (
+      Promise.all([
+        fs.readFile(
+          path.join(__dirname, 'fixtures', 'export-default-statement.js'),
+          'utf8'
+        ),
+        fs.readFile(
+          path.join(__dirname, 'results', 'export-default-statement.js'),
+          'utf8'
+        )
+      ]).then(files => {
+        [subject, result] = files;
+      })
+    ));
 
     it('appends an Object.defineProperty call to the module', () => {
       expect(plugin.transform(subject)).toBe(result);
