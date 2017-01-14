@@ -1,5 +1,17 @@
 # Rollup Plugin Lux Changelog
 
+### v2.0.0 (Jan 14, 2017)
+
+##### Commits
+
+*   [[`37fcd70c66`](https://github.com/postlight/rollup-plugin-lux/commit/37fcd70c66)] - **fix**: generate source maps for transformed code (#7) (Zachary Golba) 
+*   [[`7596546376`](https://github.com/postlight/rollup-plugin-lux/commit/7596546376)] - **deps**: update rollup to version 0.41.3 (#6) (Greenkeeper)
+*   [[`33755bc010`](https://github.com/postlight/rollup-plugin-lux/commit/33755bc010)] - **deps**: update rollup to version 0.41.2 (#5) (Greenkeeper)
+*   [[`028632b048`](https://github.com/postlight/rollup-plugin-lux/commit/028632b048)] - **deps**: update eslint to version 3.13.1 (#4) (Greenkeeper)
+*   [[`a40fdff099`](https://github.com/postlight/rollup-plugin-lux/commit/a40fdff099)] - **deps**: update eslint-config-airbnb-base to version 11.0.1 (#3) (Greenkeeper)
+*   [[`a66d718f40`](https://github.com/postlight/rollup-plugin-lux/commit/a66d718f40)] - **docs**: add npm and david-dm badges to readme (#2) (Zachary Golba)
+*   [[`2a2cc692fd`](https://github.com/postlight/rollup-plugin-lux/commit/2a2cc692fd)] - **release**: v1.0.0 🎉 (#1) (Zachary Golba)
+
 ### v1.0.0 (Jan 8, 2017)
 
 ##### Commits
