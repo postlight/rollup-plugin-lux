@@ -26,6 +26,7 @@ deployment:
   release:
     tag: /^(?:v\d.\d.\d)$/
     commands:
+      - npm run clean
       - NODE_ENV=production npm run build
       - rm -rf ~/.npmrc && touch ~/.npmrc
       - echo //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN >> ~/.npmrc
