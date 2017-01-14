@@ -31,7 +31,7 @@
     "jest": "18.1.0",
     "remark-cli": "2.1.0",
     "remark-preset-lint-recommended": "1.0.0",
-    "rollup": "0.41.3",
+    "rollup": "0.41.4",
     "rollup-plugin-babel": "2.7.1",
     "shx": "0.2.2"
   },
