@@ -10,8 +10,6 @@ dependencies:
       cd test/test-app
       npm install
       cd ../../
-  cache_directories:
-    - /home/ubuntu/watchman
 compile:
   pre:
     - npm run clean
@@ -29,6 +27,6 @@ deployment:
     tag: /^(?:v\d.\d.\d)$/
     commands:
       - NODE_ENV=production npm run build
-      - echo _auth = $NPM_AUTH_TOKEN > ~/.npmrc
-      - echo email = $NPM_EMAIL >> ~/.npmrc
+      - rm -rf ~/.npmrc && touch ~/.npmrc
+      - echo //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN >> ~/.npmrc
       - npm publish
