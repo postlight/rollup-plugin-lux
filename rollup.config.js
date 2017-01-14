@@ -18,6 +18,8 @@ export default {
     }
   ],
   external: [
-    'acorn'
+    'eol',
+    'acorn',
+    'magic-string'
   ],
 };

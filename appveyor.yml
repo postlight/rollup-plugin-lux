@@ -1,15 +1,14 @@
-image: Visual Studio 2015
+build: off
 platform: x64
 environment:
   nodejs_version: 6
-  NODE_ENV: test
-services:
-  - mysql
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - npm install
+before_test:
+  - npm run clean
+  - npm run build
 test_script:
   - npm run flow
   - npm run lint
   - npm test
-build: off

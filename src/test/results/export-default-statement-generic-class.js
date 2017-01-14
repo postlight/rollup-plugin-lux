@@ -4,4 +4,6 @@ class Point {
   }
 }
 
+Object.defineProperty(Point, 'name', { value: 'Point' });
+
 export default Point;

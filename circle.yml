@@ -1,9 +1,32 @@
+machine:
+  node:
+    version: 6
+dependencies:
+  override:
+    - npm install
+    - npm link
+  post:
+    - |
+      cd test/test-app
+      npm install
+      cd ../../
+  cache_directories:
+    - /home/ubuntu/watchman
+compile:
+  pre:
+    - npm run clean
+  override:
+    - npm run build
 test:
   override:
     - npm run flow
     - npm run lint
     - npm test
-    - npm run test:codecov
-machine:
-  node:
-    version: 6
+  post:
+    - npm run codecov
+deployment:
+  release:
+    tag: /^(?:v\d.\d.\d)$/
+    commands:
+      - NODE_ENV=production npm run build
+      - npm publish
