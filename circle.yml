@@ -29,4 +29,6 @@ deployment:
     tag: /^(?:v\d.\d.\d)$/
     commands:
       - NODE_ENV=production npm run build
+      - echo _auth = $NPM_AUTH_TOKEN > ~/.npmrc
+      - echo email = $NPM_EMAIL >> ~/.npmrc
       - npm publish
