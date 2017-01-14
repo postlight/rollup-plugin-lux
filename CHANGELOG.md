@@ -1,12 +1,19 @@
 # Rollup Plugin Lux Changelog
 
+### v2.0.2 (Jan 14, 2017)
+
+##### Commits
+
+*   [[`6fdcf0b8db`](https://github.com/postlight/rollup-plugin-lux/commit/6fdcf0b8db)] - **fix**: remove invalid cache directories from circle.yml (#12) (Zachary Golba)
+*   [[`f07f2fbcc0`](https://github.com/postlight/rollup-plugin-lux/commit/f07f2fbcc0)] - **release**: v2.0.1 🔧 (#11) (Zachary Golba)
+
 ### v2.0.1 (Jan 14, 2017)
 
 ##### Commits
 
-*   [[`59cbfcbca7`](https://github.com/postlight/rollup-plugin-lux/commit/59cbfcbca7)] - **fix**: use .npmrc auth override in circle.yml (#10) (Zachary Golba) 
-*   [[`1f3e6d6e3c`](https://github.com/postlight/rollup-plugin-lux/commit/1f3e6d6e3c)] - **deps**: update rollup to version 0.41.4 (#9) (Greenkeeper) 
-*   [[`7efd68f6db`](https://github.com/postlight/rollup-plugin-lux/commit/7efd68f6db)] - **release**: v2.0.0 🎉 (#8) (Zachary Golba) 
+*   [[`59cbfcbca7`](https://github.com/postlight/rollup-plugin-lux/commit/59cbfcbca7)] - **fix**: use .npmrc auth override in circle.yml (#10) (Zachary Golba)
+*   [[`1f3e6d6e3c`](https://github.com/postlight/rollup-plugin-lux/commit/1f3e6d6e3c)] - **deps**: update rollup to version 0.41.4 (#9) (Greenkeeper)
+*   [[`7efd68f6db`](https://github.com/postlight/rollup-plugin-lux/commit/7efd68f6db)] - **release**: v2.0.0 🎉 (#8) (Zachary Golba)
 
 ### v2.0.0 (Jan 14, 2017)
 
