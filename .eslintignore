@@ -8,5 +8,6 @@ node_modules/
 # misc
 decl/
 flow-typed/
+*interfaces.js
 */**/test/fixtures/**
 */**/test/results/**

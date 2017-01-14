@@ -4,6 +4,6 @@ class User extends Model {
 
 }
 
-export default User;
-
 Object.defineProperty(User, 'name', { value: 'User' });
+
+export default User;

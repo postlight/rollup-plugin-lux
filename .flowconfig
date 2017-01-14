@@ -1,14 +1,12 @@
 [libs]
-flow-typed/
-decl/
+./flow-typed/
+./decl/
 
 [ignore]
-.*/lib/.*
-.*/dist/.*
-.*/scripts/.*
+<PROJECT_ROOT>/dist/.*
 
 [options]
 suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
 
 [version]
-0.37.4
+^0.37.4

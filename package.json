@@ -5,13 +5,14 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "build": "npm run clean && rollup -c",
-    "clean": "node -e 'require(\"cash\").rm(\"coverage dist\", { recursive: true, force: true }); process.exit(0);'",
+    "build": "rollup -c",
+    "changelog": "release",
+    "clean": "shx rm -rf coverage dist",
+    "codecov": "curl -s https://codecov.io/bash | bash",
     "flow": "flow check",
-    "install:types": "flow-typed install --overwrite",
+    "install:types": "shx rm -rf flow-typed && flow-typed install",
     "lint": "remark . && eslint .",
-    "test": "jest --coverage",
-    "test:codecov": "curl -s https://codecov.io/bash | bash"
+    "test": "jest --coverage"
   },
   "author": "Zachary Golba",
   "license": "MIT",
@@ -21,7 +22,6 @@
     "babel-jest": "18.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.18.0",
     "babel-plugin-transform-flow-strip-types": "6.21.0",
-    "cash": "0.8.0",
     "eslint": "3.13.0",
     "eslint-config-airbnb-base": "11.0.0",
     "eslint-plugin-flowtype": "2.29.2",
@@ -30,13 +30,16 @@
     "flow-typed": "2.0.0",
     "fs-promise": "1.0.0",
     "jest": "18.1.0",
+    "release": "1.1.2",
     "remark-cli": "2.1.0",
     "remark-preset-lint-recommended": "1.0.0",
     "rollup": "0.41.1",
-    "rollup-plugin-babel": "2.7.1"
+    "rollup-plugin-babel": "2.7.1",
+    "shx": "0.2.2"
   },
   "dependencies": {
     "acorn": "4.0.4",
-    "eol": "0.5.1"
+    "eol": "0.5.1",
+    "magic-string": "0.19.0"
   }
 }

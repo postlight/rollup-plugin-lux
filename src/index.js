@@ -1,54 +1,31 @@
 // @flow
-import eol from 'eol';
 import { parse } from 'acorn';
+import MagicString from 'magic-string';
 
 import { PARSER_OPTIONS } from './constants';
-import extendsLux from './utils/extends-lux';
+import render from './transforms/render';
+import staticName from './transforms/static-name';
+import { compose } from './utils/compose';
+import type {
+  RenderResult,
+  RollupPluginLux,
+  TransformParams
+} from './interfaces';
 
-export default {
-  transform(src: string): string {
-    const { body } = parse(src, PARSER_OPTIONS);
-    const defaultExport = body.find(({ type }) => (
-      type === 'ExportDefaultDeclaration'
-    ));
+export default function plugin(): RollupPluginLux {
+  const transform: (src: string, id?: string) => RenderResult = (
+    compose(
+      render,
+      staticName,
+      (src: string): TransformParams => ({
+        src,
+        ast: parse(src, PARSER_OPTIONS),
+        code: new MagicString(src)
+      })
+    )
+  );
 
-    if (!defaultExport || defaultExport.type !== 'ExportDefaultDeclaration') {
-      return src;
-    }
-
-    let classDecl;
-
-    switch (defaultExport.declaration.type) {
-      case 'Identifier':
-        classDecl = body.find(node => (
-          node.type === 'ClassDeclaration'
-          && node.id.name === defaultExport.declaration.name
-        ));
-
-        if (!classDecl) {
-          return src;
-        }
-        break;
-
-      case 'ClassDeclaration':
-        ({ declaration: classDecl } = defaultExport);
-        break;
-
-      default:
-        return src;
-    }
-
-    if (extendsLux(classDecl) && classDecl.type === 'ClassDeclaration') {
-      const { id: { name } } = classDecl;
-      let result = eol.auto(src);
-
-      result = eol.after(result);
-      result += `Object.defineProperty(${name}, 'name', { value: '${name}' });`;
-      result = eol.after(result);
-
-      return result;
-    }
-
-    return src;
-  }
-};
+  return {
+    transform
+  };
+}
