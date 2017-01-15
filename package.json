@@ -6,7 +6,7 @@
   "module": "dist/index.es.js",
   "scripts": {
     "build": "rollup -c",
-    "clean": "shx rm -rf coverage dist",
+    "clean": "shx rm -rf coverage dist junit.xml",
     "codecov": "curl -s https://codecov.io/bash | bash",
     "flow": "flow check",
     "install:types": "shx rm -rf flow-typed && flow-typed install",
