@@ -19,7 +19,9 @@ test:
   override:
     - npm run flow
     - npm run lint
-    - npm test
+    - npm test:
+        environment:
+          JEST_JUNIT_OUTPUT: $CIRCLE_TEST_REPORTS/junit/test-results.xml
   post:
     - npm run codecov
 deployment:
