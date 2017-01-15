@@ -40,9 +40,13 @@ describe('#transform()', () => {
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        const { code } = plugin().transform(subject, id);
+        const transformed = plugin().transform(subject, id);
 
-        expect(code).toBe(result);
+        expect(typeof transformed).toBe('object');
+
+        if (typeof transformed === 'object') {
+          expect(transformed.code).toBe(result);
+        }
       });
     });
 
@@ -78,9 +82,13 @@ describe('#transform()', () => {
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        const { code } = plugin().transform(subject, id);
+        const transformed = plugin().transform(subject, id);
 
-        expect(code).toBe(result);
+        expect(typeof transformed).toBe('object');
+
+        if (typeof transformed === 'object') {
+          expect(transformed.code).toBe(result);
+        }
       });
     });
   });
@@ -118,9 +126,13 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin().transform(subject, id);
+        const transformed = plugin().transform(subject, id);
 
-        expect(code).toBe(result);
+        expect(typeof transformed).toBe('object');
+
+        if (typeof transformed === 'object') {
+          expect(transformed.code).toBe(result);
+        }
       });
     });
 
@@ -136,9 +148,13 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin().transform(subject, id);
+        const transformed = plugin().transform(subject, id);
 
-        expect(code).toBe(subject);
+        expect(typeof transformed).toBe('object');
+
+        if (typeof transformed === 'object') {
+          expect(transformed.code).toBe(subject);
+        }
       });
     });
 
@@ -159,9 +175,13 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin().transform(subject, id);
+        const transformed = plugin().transform(subject, id);
 
-        expect(code).toBe(subject);
+        expect(typeof transformed).toBe('object');
+
+        if (typeof transformed === 'object') {
+          expect(transformed.code).toBe(subject);
+        }
       });
     });
 
@@ -177,9 +197,13 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin().transform(subject, id);
+        const transformed = plugin().transform(subject, id);
 
-        expect(code).toBe(subject);
+        expect(typeof transformed).toBe('object');
+
+        if (typeof transformed === 'object') {
+          expect(transformed.code).toBe(subject);
+        }
       });
     });
   });
