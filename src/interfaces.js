@@ -13,6 +13,6 @@ export type TransformParams = {
   code: MagicString;
 };
 
-export interface RollupPluginLux {
+export type RollupPluginLux = {
   transform(src: string): RenderResult;
-}
+};
