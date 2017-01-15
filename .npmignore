@@ -1,0 +1,19 @@
+# See https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+# for more about ignoring files.
+
+# dependencies
+node_modules/
+
+# misc
+.git
+.nyc_output/
+coverage/
+*.DS_Store
+*junit.xml
+
+# logs
+log/
+npm-debug.log
+
+# tests
+test/
