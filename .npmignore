@@ -10,6 +10,7 @@ node_modules/
 coverage/
 *.DS_Store
 *junit.xml
+.flowconfig
 
 # logs
 log/
