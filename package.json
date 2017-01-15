@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-lux",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A Rollup plugin for bundling Lux applications.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
