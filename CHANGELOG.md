@@ -1,5 +1,13 @@
 # Rollup Plugin Lux Changelog
 
+### v2.0.3 (Jan 14, 2017)
+
+##### Commits
+
+*   [[`3fed5e45e8`](https://github.com/postlight/rollup-plugin-lux/commit/3fed5e45e8)] - **deps**: update third party type declarations (#15) (Zachary Golba) 
+*   [[`b82b87b98b`](https://github.com/postlight/rollup-plugin-lux/commit/b82b87b98b)] - **fix**: run clean script before npm build when publishing (#14) (Zachary Golba) 
+*   [[`4ca419e2c8`](https://github.com/postlight/rollup-plugin-lux/commit/4ca419e2c8)] - **release**: v2.0.2 🔧 (#13) (Zachary Golba) 
+
 ### v2.0.2 (Jan 14, 2017)
 
 ##### Commits
