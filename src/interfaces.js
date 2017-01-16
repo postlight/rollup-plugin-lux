@@ -1,6 +1,6 @@
 // @flow
-import typeof transform from './transform';
+import type { TransformFunction } from './transform';
 
 export type RollupPluginLux = {
-  transform: transform;
+  transform: TransformFunction;
 };

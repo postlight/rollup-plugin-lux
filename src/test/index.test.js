@@ -7,6 +7,8 @@ import eol from 'eol';
 import plugin from '../index';
 
 describe('#transform()', () => {
+  const appPath = path.posix.join(__dirname, 'fixtures');
+
   describe('with lux sub class', () => {
     describe('[ClassDeclaration] export default [Identifier]', () => {
       let id;
@@ -40,13 +42,9 @@ describe('#transform()', () => {
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        const transformed = plugin().transform(subject, id);
+        const { code } = plugin(appPath).transform(subject, id);
 
-        expect(typeof transformed).toBe('object');
-
-        if (typeof transformed === 'object') {
-          expect(transformed.code).toBe(result);
-        }
+        expect(code).toBe(result);
       });
     });
 
@@ -82,13 +80,9 @@ describe('#transform()', () => {
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        const transformed = plugin().transform(subject, id);
+        const { code } = plugin(appPath).transform(subject, id);
 
-        expect(typeof transformed).toBe('object');
-
-        if (typeof transformed === 'object') {
-          expect(transformed.code).toBe(result);
-        }
+        expect(code).toBe(result);
       });
     });
   });
@@ -126,13 +120,9 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const transformed = plugin().transform(subject, id);
+        const { code } = plugin(appPath).transform(subject, id);
 
-        expect(typeof transformed).toBe('object');
-
-        if (typeof transformed === 'object') {
-          expect(transformed.code).toBe(result);
-        }
+        expect(code).toBe(result);
       });
     });
 
@@ -148,13 +138,9 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const transformed = plugin().transform(subject, id);
+        const { code } = plugin(appPath).transform(subject, id);
 
-        expect(typeof transformed).toBe('object');
-
-        if (typeof transformed === 'object') {
-          expect(transformed.code).toBe(subject);
-        }
+        expect(code).toBe(subject);
       });
     });
 
@@ -175,13 +161,9 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const transformed = plugin().transform(subject, id);
+        const { code } = plugin(appPath).transform(subject, id);
 
-        expect(typeof transformed).toBe('object');
-
-        if (typeof transformed === 'object') {
-          expect(transformed.code).toBe(subject);
-        }
+        expect(code).toBe(subject);
       });
     });
 
@@ -197,13 +179,9 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        const transformed = plugin().transform(subject, id);
+        const { code } = plugin(appPath).transform(subject, id);
 
-        expect(typeof transformed).toBe('object');
-
-        if (typeof transformed === 'object') {
-          expect(transformed.code).toBe(subject);
-        }
+        expect(code).toBe(subject);
       });
     });
   });
