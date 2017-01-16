@@ -8,6 +8,7 @@ node_modules/
 .git
 .nyc_output/
 coverage/
+*/test/
 *.DS_Store
 *junit.xml
 .flowconfig
