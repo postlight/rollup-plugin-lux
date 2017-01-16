@@ -1,11 +1,18 @@
 # Rollup Plugin Lux Changelog
 
+### v3.0.0 (Jan 16, 2017)
+
+##### Commits
+
+*   [[`51bc1c0a43`](https://github.com/postlight/rollup-plugin-lux/commit/51bc1c0a43)] - **feat**: only transform modules under the app path (#27) (Zachary Golba)
+*   [[`8df727e2d5`](https://github.com/postlight/rollup-plugin-lux/commit/8df727e2d5)] - **release**: v2.0.6 🔧 (#26) (Zachary Golba) 
+
 ### v2.0.6 (Jan 15, 2017)
 
 ##### Commits
 
-*   [[`b5165d76d0`](https://github.com/postlight/rollup-plugin-lux/commit/b5165d76d0)] - **chore**: add test directory pattern to .npmignore (#25) (Zachary Golba) 
-*   [[`3a0a533e9f`](https://github.com/postlight/rollup-plugin-lux/commit/3a0a533e9f)] - **release**: v2.0.5 🔧 (#24) (Zachary Golba) 
+*   [[`b5165d76d0`](https://github.com/postlight/rollup-plugin-lux/commit/b5165d76d0)] - **chore**: add test directory pattern to .npmignore (#25) (Zachary Golba)
+*   [[`3a0a533e9f`](https://github.com/postlight/rollup-plugin-lux/commit/3a0a533e9f)] - **release**: v2.0.5 🔧 (#24) (Zachary Golba)
 
 ### v2.0.5 (Jan 15, 2017)
 
