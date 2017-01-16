@@ -1,14 +1,21 @@
 # Rollup Plugin Lux Changelog
 
+### v2.0.6 (Jan 15, 2017)
+
+##### Commits
+
+*   [[`b5165d76d0`](https://github.com/postlight/rollup-plugin-lux/commit/b5165d76d0)] - **chore**: add test directory pattern to .npmignore (#25) (Zachary Golba) 
+*   [[`3a0a533e9f`](https://github.com/postlight/rollup-plugin-lux/commit/3a0a533e9f)] - **release**: v2.0.5 🔧 (#24) (Zachary Golba) 
+
 ### v2.0.5 (Jan 15, 2017)
 
 ##### Commits
 
-*   [[`8691fc0d68`](https://github.com/postlight/rollup-plugin-lux/commit/8691fc0d68)] - **refactor**: improve types and encapsulation for transform method (#23) (Zachary Golba) 
-*   [[`e3473ce996`](https://github.com/postlight/rollup-plugin-lux/commit/e3473ce996)] - **deps**: update eslint-plugin-flowtype to version 2.30.0 (#20) (Greenkeeper) 
-*   [[`a94d680617`](https://github.com/postlight/rollup-plugin-lux/commit/a94d680617)] - **fix**: add .flowconfig to npm ignore and improve config (#21) (Zachary Golba) 
-*   [[`64f5e8edd0`](https://github.com/postlight/rollup-plugin-lux/commit/64f5e8edd0)] - **chore**: only build master branch on appveyor (#22) (Zachary Golba) 
-*   [[`f181d63f71`](https://github.com/postlight/rollup-plugin-lux/commit/f181d63f71)] - **release**: v2.0.4 🔧 (#19) (Zachary Golba) 
+*   [[`8691fc0d68`](https://github.com/postlight/rollup-plugin-lux/commit/8691fc0d68)] - **refactor**: improve types and encapsulation for transform method (#23) (Zachary Golba)
+*   [[`e3473ce996`](https://github.com/postlight/rollup-plugin-lux/commit/e3473ce996)] - **deps**: update eslint-plugin-flowtype to version 2.30.0 (#20) (Greenkeeper)
+*   [[`a94d680617`](https://github.com/postlight/rollup-plugin-lux/commit/a94d680617)] - **fix**: add .flowconfig to npm ignore and improve config (#21) (Zachary Golba)
+*   [[`64f5e8edd0`](https://github.com/postlight/rollup-plugin-lux/commit/64f5e8edd0)] - **chore**: only build master branch on appveyor (#22) (Zachary Golba)
+*   [[`f181d63f71`](https://github.com/postlight/rollup-plugin-lux/commit/f181d63f71)] - **release**: v2.0.4 🔧 (#19) (Zachary Golba)
 
 ### v2.0.4 (Jan 14, 2017)
 
