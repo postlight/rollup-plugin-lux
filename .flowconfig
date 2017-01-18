@@ -9,8 +9,9 @@
 ./decl/
 
 [options]
+emoji=true
 strip_root=true
 suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
 
 [version]
-^0.37.4
+^0.38.0
