@@ -27,8 +27,6 @@ export function resolve({ local, project }: ResolveOptions): RollupPluginLux {
           resolved += '.js';
         }
 
-        console.log(resolved);
-
         return resolved;
       }
 
