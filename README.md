@@ -1,5 +1,7 @@
 # Rollup Plugin Lux
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/postlight/rollup-plugin-lux.svg)](https://greenkeeper.io/)
+
 [![CircleCI branch](https://img.shields.io/circleci/project/github/postlight/rollup-plugin-lux/master.svg?style=flat-square)](https://circleci.com/gh/postlight/rollup-plugin-lux/tree/master) [![AppVeyor](https://img.shields.io/appveyor/ci/zacharygolba/rollup-plugin-lux/master.svg?style=flat-square)](https://ci.appveyor.com/project/zacharygolba/rollup-plugin-lux/branch/master) [![Codecov branch](https://img.shields.io/codecov/c/github/postlight/rollup-plugin-lux/master.svg?style=flat-square)](https://codecov.io/gh/postlight/rollup-plugin-lux) [![David](https://img.shields.io/david/postlight/rollup-plugin-lux.svg?style=flat-square)](https://david-dm.org/postlight/rollup-plugin-lux) [![npm](https://img.shields.io/npm/v/rollup-plugin-lux.svg?style=flat-square)](https://www.npmjs.com/package/rollup-plugin-lux)
 
 [Lux](https://github.com/postlight/lux) uses [Babel](https://github.com/babel/babel)
