@@ -1,6 +1,5 @@
 exports[`#transform() with lux sub class [ClassDeclaration] export default [Identifier] appends an Object.defineProperty call to the module 1`] = `
-Object {
-  "code": "import { Model } from \'lux-framework\';
+"import { Model } from \'lux-framework\';
 
 class User extends Model {
 
@@ -9,50 +8,22 @@ class User extends Model {
 Object.defineProperty(User, \'name\', { value: \'User\' });
 
 export default User;
-",
-  "map": Object {
-    "file": null,
-    "mappings": "AAAA;;;;;;uDAIC;;;",
-    "names": Array [],
-    "sources": Array [
-      null,
-    ],
-    "sourcesContent": Array [
-      null,
-    ],
-    "version": 3,
-  },
-}
+"
 `;
 
 exports[`#transform() with lux sub class export default [ClassExpression] appends an Object.defineProperty call to the module 1`] = `
-Object {
-  "code": "import { Model } from \'lux-framework\';
+"import { Model } from \'lux-framework\';
 
 export default class User extends Model {
 
 }
 
 Object.defineProperty(User, \'name\', { value: \'User\' });
-",
-  "map": Object {
-    "file": null,
-    "mappings": "AAAA;;;;;;uDAIC;",
-    "names": Array [],
-    "sources": Array [
-      null,
-    ],
-    "sourcesContent": Array [
-      null,
-    ],
-    "version": 3,
-  },
-}
+"
 `;
 
 exports[`#transform() without lux sub class [ClassDeclaration] export default [Identifier] does not modify the source 1`] = `
-Object {
-  "code": "class Point {
+"class Point {
   constructor(x, y) {
     Object.assign(this, { x, y });
   }
@@ -61,79 +32,24 @@ Object {
 Object.defineProperty(Point, \'name\', { value: \'Point\' });
 
 export default Point;
-",
-  "map": Object {
-    "file": null,
-    "mappings": "AAAA;;;;;;yDAIC;;;",
-    "names": Array [],
-    "sources": Array [
-      null,
-    ],
-    "sourcesContent": Array [
-      null,
-    ],
-    "version": 3,
-  },
-}
+"
 `;
 
 exports[`#transform() without lux sub class [FunctionDeclaration] export default [Identifier] does not modify the source 1`] = `
-Object {
-  "code": "function test() {
+"function test() {
 
 }
 
 export default test;
-",
-  "map": Object {
-    "file": null,
-    "mappings": "AAAA;;;;;",
-    "names": Array [],
-    "sources": Array [
-      null,
-    ],
-    "sourcesContent": Array [
-      null,
-    ],
-    "version": 3,
-  },
-}
+"
 `;
 
 exports[`#transform() without lux sub class export default [ArrowFunctionExpression] does not modify the source 1`] = `
-Object {
-  "code": "export default () => undefined;
-",
-  "map": Object {
-    "file": null,
-    "mappings": "AAAA;",
-    "names": Array [],
-    "sources": Array [
-      null,
-    ],
-    "sourcesContent": Array [
-      null,
-    ],
-    "version": 3,
-  },
-}
+"export default () => undefined;
+"
 `;
 
 exports[`#transform() without lux sub class named export does not modify the source 1`] = `
-Object {
-  "code": "export const TEST = true;
-",
-  "map": Object {
-    "file": null,
-    "mappings": "AAAA;",
-    "names": Array [],
-    "sources": Array [
-      null,
-    ],
-    "sourcesContent": Array [
-      null,
-    ],
-    "version": 3,
-  },
-}
+"export const TEST = true;
+"
 `;

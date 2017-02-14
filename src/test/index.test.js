@@ -27,7 +27,7 @@ describe('#transform()', () => {
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
+        expect(plugin(appPath).transform(subject, id).code).toMatchSnapshot();
       });
     });
 
@@ -49,7 +49,7 @@ describe('#transform()', () => {
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
+        expect(plugin(appPath).transform(subject, id).code).toMatchSnapshot();
       });
     });
   });
@@ -73,7 +73,7 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
+        expect(plugin(appPath).transform(subject, id).code).toMatchSnapshot();
       });
     });
 
@@ -91,7 +91,7 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
+        expect(plugin(appPath).transform(subject, id).code).toMatchSnapshot();
       });
     });
 
@@ -113,7 +113,7 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
+        expect(plugin(appPath).transform(subject, id).code).toMatchSnapshot();
       });
     });
 
@@ -131,7 +131,7 @@ describe('#transform()', () => {
       });
 
       it('does not modify the source', () => {
-        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
+        expect(plugin(appPath).transform(subject, id).code).toMatchSnapshot();
       });
     });
   });
