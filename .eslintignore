@@ -9,5 +9,5 @@ node_modules/
 decl/
 flow-typed/
 *interfaces.js
-*/**/test/fixtures/**
-*/**/test/results/**
+*/**/test/__fixtures__/
+*/**/test/__snapshots__/
