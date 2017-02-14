@@ -1,7 +1,7 @@
 // @flow
 import eol from 'eol';
 
-import type { TransformParams } from './interfaces';
+import type { TransformParams } from './index';
 
 export default function staticName<T: TransformParams>(params: T): T {
   const { code, ast: { body } } = params;

@@ -1,5 +1,5 @@
 // @flow
-import type { TransformParams, TransformResult } from './interfaces';
+import type { TransformParams, TransformResult } from './index';
 
 export default function render({ code }: TransformParams): TransformResult {
   return {

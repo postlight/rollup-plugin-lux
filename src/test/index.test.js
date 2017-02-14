@@ -2,87 +2,54 @@
 import path from 'path';
 
 import fs from 'fs-promise';
-import eol from 'eol';
 
 import plugin from '../index';
 
 describe('#transform()', () => {
-  const appPath = path.posix.join(__dirname, 'fixtures');
+  const appPath = path.posix.join(__dirname, '__fixtures__');
 
   describe('with lux sub class', () => {
     describe('[ClassDeclaration] export default [Identifier]', () => {
       let id;
-      let result;
       let subject;
 
       beforeEach(() => {
         id = path.join(
           __dirname,
-          'fixtures',
+          '__fixtures__',
           'export-default-statement-lux-sub-class.js'
         );
-
-        return Promise
-          .all([
-            fs.readFile(id, 'utf8'),
-            fs.readFile(
-              path.join(
-                __dirname,
-                'results',
-                'export-default-statement-lux-sub-class.js'
-              ),
-              'utf8'
-            )
-          ])
-          .then(files => {
-            [subject, result] = files;
-            subject = eol.auto(subject);
-            result = eol.auto(result);
+        return fs
+          .readFile(id, 'utf8')
+          .then(data => {
+            subject = data;
           });
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        const { code } = plugin(appPath).transform(subject, id);
-
-        expect(code).toBe(result);
+        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
       });
     });
 
     describe('export default [ClassExpression]', () => {
       let id;
-      let result;
       let subject;
 
       beforeEach(() => {
         id = path.join(
           __dirname,
-          'fixtures',
+          '__fixtures__',
           'export-default-expression-lux-sub-class.js'
         );
-
-        return Promise
-          .all([
-            fs.readFile(id, 'utf8'),
-            fs.readFile(
-              path.join(
-                __dirname,
-                'results',
-                'export-default-expression-lux-sub-class.js'
-              ),
-              'utf8'
-            )
-          ])
-          .then(files => {
-            [subject, result] = files;
-            subject = eol.auto(subject);
-            result = eol.auto(result);
+        return fs
+          .readFile(id, 'utf8')
+          .then(data => {
+            subject = data;
           });
       });
 
       it('appends an Object.defineProperty call to the module', () => {
-        const { code } = plugin(appPath).transform(subject, id);
-
-        expect(code).toBe(result);
+        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
       });
     });
   });
@@ -90,39 +57,23 @@ describe('#transform()', () => {
   describe('without lux sub class', () => {
     describe('[ClassDeclaration] export default [Identifier]', () => {
       let id;
-      let result;
       let subject;
 
       beforeEach(() => {
         id = path.join(
           __dirname,
-          'fixtures',
+          '__fixtures__',
           'export-default-statement-generic-class.js'
         );
-
-        return Promise
-          .all([
-            fs.readFile(id, 'utf8'),
-            fs.readFile(
-              path.join(
-                __dirname,
-                'results',
-                'export-default-statement-generic-class.js'
-              ),
-              'utf8'
-            )
-          ])
-          .then(files => {
-            [subject, result] = files;
-            subject = eol.auto(subject);
-            result = eol.auto(result);
+        return fs
+          .readFile(id, 'utf8')
+          .then(data => {
+            subject = data;
           });
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin(appPath).transform(subject, id);
-
-        expect(code).toBe(result);
+        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
       });
     });
 
@@ -131,16 +82,16 @@ describe('#transform()', () => {
       let subject;
 
       beforeEach(() => {
-        id = path.join(__dirname, 'fixtures', 'export-default-function.js');
-        return fs.readFile(id, 'utf8').then(file => {
-          subject = eol.auto(file);
-        });
+        id = path.join(__dirname, '__fixtures__', 'export-default-function.js');
+        return fs
+          .readFile(id, 'utf8')
+          .then(data => {
+            subject = data;
+          });
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin(appPath).transform(subject, id);
-
-        expect(code).toBe(subject);
+        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
       });
     });
 
@@ -151,19 +102,18 @@ describe('#transform()', () => {
       beforeEach(() => {
         id = path.join(
           __dirname,
-          'fixtures',
+          '__fixtures__',
           'export-default-arrow-function.js'
         );
-
-        return fs.readFile(id, 'utf8').then(file => {
-          subject = eol.auto(file);
-        });
+        return fs
+          .readFile(id, 'utf8')
+          .then(data => {
+            subject = data;
+          });
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin(appPath).transform(subject, id);
-
-        expect(code).toBe(subject);
+        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
       });
     });
 
@@ -172,16 +122,16 @@ describe('#transform()', () => {
       let subject;
 
       beforeEach(() => {
-        id = path.join(__dirname, 'fixtures', 'named-export.js');
-        return fs.readFile(id, 'utf8').then(file => {
-          subject = eol.auto(file);
-        });
+        id = path.join(__dirname, '__fixtures__', 'named-export.js');
+        return fs
+          .readFile(id, 'utf8')
+          .then(data => {
+            subject = data;
+          });
       });
 
       it('does not modify the source', () => {
-        const { code } = plugin(appPath).transform(subject, id);
-
-        expect(code).toBe(subject);
+        expect(plugin(appPath).transform(subject, id)).toMatchSnapshot();
       });
     });
   });

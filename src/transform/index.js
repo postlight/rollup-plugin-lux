@@ -1,10 +1,25 @@
 // @flow
+import type { Program } from 'acorn';
+import type MagicString from 'magic-string';
+
 import { compose } from '../utils/compose';
 
 import render from './render';
 import staticName from './static-name';
 import parseSource from './parse-source';
-import type { TransformFunction } from './interfaces';
+
+export type TransformResult = {
+  map: Object;
+  code: string;
+};
+
+export type TransformParams = {
+  src: string;
+  ast: Program;
+  code: MagicString;
+};
+
+export type TransformFunction = (src: string, id: string) => TransformResult;
 
 const transformer = compose(
   render,
@@ -17,5 +32,3 @@ export default function createTransformer(appPath: string): TransformFunction {
     id.startsWith(appPath) ? transformer(src) : render(parseSource(src))
   );
 }
-
-export type { TransformFunction } from './interfaces';
