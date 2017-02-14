@@ -21,6 +21,7 @@ export default {
   ],
   external: [
     'eol',
+    'path',
     'acorn',
     'magic-string'
   ],
